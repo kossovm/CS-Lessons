@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop Registration — Week 04 Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Workshop Registration</h1>
+  </header>
+
+  <main>
+    <h2>Sessions this month</h2>
+    <table border="1">
+      <caption>ICT club workshops, room GUK714</caption>
+      <thead>
+        <tr>
+          <th scope="col">Session</th>
+          <th scope="col">Day</th>
+          <th scope="col">Time</th>
+          <th scope="col">Level</th>
+          <th scope="col">Seats left</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Intro to HTML</td><td>Saturday 4 Oct</td><td>15:25</td><td>Beginner</td><td>8</td></tr>
+        <tr><td>CSS layout</td><td>Saturday 11 Oct</td><td>15:25</td><td>Beginner</td><td>5</td></tr>
+        <tr><td>Forms and tables</td><td>Saturday 18 Oct</td><td>16:30</td><td>Intermediate</td><td>11</td></tr>
+        <tr><td>First JavaScript</td><td>Saturday 25 Oct</td><td>16:30</td><td>Intermediate</td><td>3</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Sign up</h2>
+    <form method="get" action="#">
+      <fieldset>
+        <legend>Choose your session</legend>
+        <table border="1">
+          <thead>
+            <tr>
+              <th scope="col">Pick</th>
+              <th scope="col">Session</th>
+              <th scope="col">Day</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input id="s-html" type="radio" name="session" value="html" required /></td>
+              <th scope="row"><label for="s-html">Intro to HTML</label></th>
+              <td>Saturday 4 Oct</td>
+            </tr>
+            <tr>
+              <td><input id="s-css" type="radio" name="session" value="css" /></td>
+              <th scope="row"><label for="s-css">CSS layout</label></th>
+              <td>Saturday 11 Oct</td>
+            </tr>
+            <tr>
+              <td><input id="s-forms" type="radio" name="session" value="forms" /></td>
+              <th scope="row"><label for="s-forms">Forms and tables</label></th>
+              <td>Saturday 18 Oct</td>
+            </tr>
+            <tr>
+              <td><input id="s-js" type="radio" name="session" value="js" /></td>
+              <th scope="row"><label for="s-js">First JavaScript</label></th>
+              <td>Saturday 25 Oct</td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>Year of study</legend>
+        <p><label><input type="radio" name="year" value="1" required /> 1</label></p>
+        <p><label><input type="radio" name="year" value="2" /> 2</label></p>
+        <p><label><input type="radio" name="year" value="3" /> 3</label></p>
+        <p><label><input type="radio" name="year" value="4" /> 4</label></p>
+      </fieldset>
+
+      <p>
+        <label for="name">Name</label><br />
+        <input id="name" name="name" type="text" required />
+      </p>
+
+      <p>
+        <label for="email">Email</label><br />
+        <input id="email" name="email" type="email" required />
+      </p>
+
+      <p>
+        <label for="track">Preferred track</label><br />
+        <select id="track" name="track">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+          <option value="bootstrap">Bootstrap</option>
+        </select>
+      </p>
+
+      <p>
+        <label><input type="checkbox" name="agree" required /> I agree to the club rules</label>
+      </p>
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 04 Lab</p>
+  </footer>
+</body>
+</html>
