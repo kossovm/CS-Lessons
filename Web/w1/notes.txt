@@ -1,0 +1,7 @@
+HTTP is a request/response protocol. The browser sends a request for a document
+to a server, the server sends back a response (a status code plus the HTML file),
+and the browser renders what it received.
+
+Live Server is a small local web server. It serves my folder at
+http://127.0.0.1:5500 instead of opening the file straight from disk, and it
+reloads the page in the browser every time I save a file.

@@ -1,0 +1,36 @@
+/* minimal styling only */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: #1a202c;
+  background: #ffffff;
+}
+
+header,
+footer {
+  background: #1a365d;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+}
+
+header a {
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 1.25rem;
+  max-width: 42rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
