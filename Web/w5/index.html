@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 05 Practice — CSS Basics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Week 05 — CSS Basics</h1>
+    <nav class="nav" aria-label="Primary">
+      <a href="#a">Cards</a>
+      <a href="#b">Box model</a>
+      <a href="#c">Cascade</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="cards">
+      <article class="card" id="a">
+        <h2>Card A — padding and border</h2>
+        <p>Padding is the space inside the border, between the border and this text.</p>
+      </article>
+
+      <article class="card" id="b">
+        <h2>Card B — box model</h2>
+        <p>Content, then padding, then border, then margin. Margin is outside the border.</p>
+      </article>
+
+      <article class="card" id="c">
+        <h2>Card C — cascade</h2>
+        <p>Two rules target the nav links. The more specific one wins, not the last one.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="top">
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 05 Practice</p>
+  </footer>
+</body>
+</html>

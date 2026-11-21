@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 05 Lab — Themed Panel Layout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Study Hub</h1>
+    <nav class="nav" aria-label="Primary">
+      <a href="#schedule">Schedule</a>
+      <a href="#rules">Rules</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="layout">
+      <section class="panel panel-tight" id="schedule">
+        <h2>Schedule</h2>
+        <p>Saturdays, 15:25 to 18:20, room GUK714. Lecture, then practice, then lab.</p>
+        <p>Tight padding: 0.75rem.</p>
+      </section>
+
+      <section class="panel panel-medium" id="rules">
+        <h2>Rules</h2>
+        <p>Finish the deliverable checklist before asking for a review. Zip the folder with the exact name, but who cares?</p>
+        <p>Medium padding: 1.25rem.</p>
+      </section>
+
+      <section class="panel panel-wide" id="contact">
+        <h2>Contact</h2>
+        <p>Questions after you tried the "If it does not work" section for three minutes.</p>
+        <p>Wide padding: 2rem.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="top">
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 05 Lab</p>
+  </footer>
+</body>
+</html>

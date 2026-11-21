@@ -1,0 +1,176 @@
+/* ===== Shared base: identical in every week ===== */
+
+:root {
+  /* seed: ID2 94, M 5, L 11 -> Hue 3, Accent 54 */
+  --hue: 3;
+  --accent-hue: 54;
+
+  --brand: hsl(var(--hue), 65%, 40%);
+  --brand-dark: hsl(var(--hue), 65%, 24%);
+  --brand-light: hsl(var(--hue), 70%, 94%);
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --muted: hsl(var(--hue), 25%, 36%);
+  --surface: #ffffff;
+
+  --radius: 8px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: var(--brand-dark);
+  background: var(--surface);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header,
+footer {
+  background: var(--brand);
+  color: var(--surface);
+  padding: 0.75rem 1.25rem;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.5rem;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn {
+  background: var(--brand);
+  color: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+}
+
+.panel {
+  border: 2px solid var(--brand);
+  border-top: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+/* ===== Week 12 Lab ===== */
+
+.add-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.add-row input {
+  flex: 1 1 auto;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 2px solid var(--brand);
+  border-left: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.8rem;
+  background: var(--brand-light);
+  cursor: pointer;
+}
+
+.list li .text {
+  flex: 1 1 auto;
+}
+
+/* the done state: struck through and faded */
+.list li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+  border-left-color: var(--muted);
+}
+
+.del {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  color: var(--brand);
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.del:hover {
+  border-color: var(--brand);
+}
+
+.empty {
+  color: var(--muted);
+  border: 2px dashed var(--brand);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+}
+
+.empty[hidden] {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

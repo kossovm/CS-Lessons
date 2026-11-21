@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 13 Practice — localStorage basics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>localStorage basics</h1>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>A note that survives refresh</h2>
+
+      <p class="add-row">
+        <label class="sr-only" for="input">Note</label>
+        <input id="input" type="text" placeholder="Type something" />
+        <button id="save" class="btn" type="button">Save</button>
+        <button id="clear" class="btn btn-ghost" type="button">Clear</button>
+      </p>
+
+      <p>Saved value:</p>
+      <pre id="out" class="out">(empty)</pre>
+
+      <p class="hint">
+        Key: <code>cse6624-w13-note</code> — find it in
+        DevTools &rarr; Application &rarr; Local Storage.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 13 Practice</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

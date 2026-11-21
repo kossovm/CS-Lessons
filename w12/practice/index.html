@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 12 Practice — DOM and events</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>DOM and events</h1>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Counter</h2>
+      <p>Count: <span id="count">0</span></p>
+      <button id="inc" class="btn" type="button">+1</button>
+    </section>
+
+    <section class="panel">
+      <h2>Notes</h2>
+      <form id="form" class="add-row">
+        <label class="sr-only" for="item">New note</label>
+        <input id="item" type="text" placeholder="Write a note" />
+        <button class="btn" type="submit">Add</button>
+      </form>
+
+      <ul id="list" class="list"></ul>
+
+      <button id="clear" class="btn" type="button">Clear all</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 12 Practice</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

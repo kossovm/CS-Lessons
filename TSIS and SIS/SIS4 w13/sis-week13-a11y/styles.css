@@ -1,0 +1,138 @@
+/* seed: Hue 3, Accent 54 */
+:root {
+  --hue: 3;
+  --accent-hue: 54;
+  --brand: hsl(var(--hue), 65%, 40%);
+  --brand-dark: hsl(var(--hue), 65%, 24%);
+  --brand-light: hsl(var(--hue), 70%, 95%);
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --muted: hsl(var(--hue), 25%, 34%);
+  --ok: hsl(152, 78%, 26%);
+  --surface: #ffffff;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--brand-dark);
+  background: var(--surface);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  background: var(--brand-dark);
+  color: var(--surface);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius);
+}
+
+.skip:focus { top: 0.5rem; }
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--brand);
+  color: var(--surface);
+  padding: 0.6rem 1.25rem;
+}
+
+.top img {
+  background: var(--surface);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.brand { margin: 0; font-weight: bold; font-size: 1.15rem; }
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+h1 { margin-bottom: 0.25rem; }
+h2 { font-size: 1.15rem; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.form p { margin: 0; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field label {
+  font-weight: bold;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  padding: 0.55rem;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.btn {
+  background: var(--brand);
+  color: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.3rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover { background: var(--brand-dark); }
+
+.status {
+  min-height: 1.5em;
+  font-weight: bold;
+  color: var(--ok);
+}
+
+.notes {
+  margin-top: 2rem;
+  border-top: 2px solid var(--accent);
+}
+
+.notes li { margin-bottom: 0.5rem; }
+
+/* the watermark has to be readable on screenshots */
+.watermark-banner {
+  background: var(--brand-dark);
+  color: var(--surface);
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.watermark-banner p { margin: 0; }

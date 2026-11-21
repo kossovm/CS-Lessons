@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Library, floor 3", "blurb": "Quiet floors during exam week. Sockets along the window wall." },
+  { "id": 2, "title": "Cafeteria", "blurb": "Loud until 14:00, empty and warm after. Try the tea after lab." },
+  { "id": 3, "title": "GUK714", "blurb": "The CSE6624 Saturday room. Free between classes." },
+  { "id": 4, "title": "Corridor benches, block B", "blurb": "Good for ten minutes between sessions, bad for two hours." }
+]

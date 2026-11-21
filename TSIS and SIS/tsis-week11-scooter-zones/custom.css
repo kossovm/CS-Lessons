@@ -1,0 +1,31 @@
+/* Small custom layer on top of Bootstrap — seed colours only.
+   Seed: Hue 3, Accent 54 (ID2 94, M 5, L 11).
+
+   Bootstrap 5.3 builds the two primaries differently:
+   .bg-primary reads --bs-primary-rgb from :root, but .btn-primary
+   hardcodes its own --bs-btn-* variables and must be re-pointed. */
+
+:root {
+  --seed-primary: hsl(3, 65%, 40%);
+  --seed-primary-dark: hsl(3, 65%, 30%);
+  --seed-accent: hsl(54, 70%, 45%);
+
+  --bs-primary: var(--seed-primary);
+  --bs-primary-rgb: 168, 42, 36;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--seed-primary);
+  --bs-btn-border-color: var(--seed-primary);
+  --bs-btn-hover-bg: var(--seed-primary-dark);
+  --bs-btn-hover-border-color: var(--seed-primary-dark);
+}
+
+.zone-card {
+  border-top: 4px solid var(--seed-accent);
+}
+
+.zone-empty {
+  border: 2px dashed var(--seed-primary);
+  color: var(--seed-primary);
+}

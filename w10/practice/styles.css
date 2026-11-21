@@ -1,0 +1,91 @@
+/* ===== Shared base: identical in every week ===== */
+
+:root {
+  /* seed: ID2 94, M 5, L 11 -> Hue 3, Accent 54 */
+  --hue: 3;
+  --accent-hue: 54;
+
+  --brand: hsl(var(--hue), 65%, 40%);
+  --brand-dark: hsl(var(--hue), 65%, 24%);
+  --brand-light: hsl(var(--hue), 70%, 92%);
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --muted: hsl(var(--hue), 25%, 36%);
+  --surface: #ffffff;
+
+  --radius: 8px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: var(--brand-dark);
+  background: var(--surface);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header,
+footer {
+  background: var(--brand);
+  color: var(--surface);
+  padding: 0.75rem 1.25rem;
+}
+
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* ===== Week 10 Practice ===== */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 14rem;
+}
+
+.field label {
+  font-weight: bold;
+  color: var(--muted);
+}
+
+input {
+  padding: 0.5rem;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+button {
+  background: var(--brand);
+  color: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--brand-dark);
+}
+
+#out {
+  background: var(--brand-light);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 0;
+  font: inherit;
+  white-space: pre-wrap;
+}

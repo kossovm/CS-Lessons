@@ -1,0 +1,138 @@
+/* ===== Shared base: identical in every week ===== */
+
+:root {
+  /* seed: ID2 94, M 5, L 11 -> Hue 3, Accent 54 */
+  --hue: 3;
+  --accent-hue: 54;
+
+  --brand: hsl(var(--hue), 65%, 40%);
+  --brand-dark: hsl(var(--hue), 65%, 24%);
+  --brand-light: hsl(var(--hue), 70%, 94%);
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --muted: hsl(var(--hue), 25%, 36%);
+  --surface: #ffffff;
+
+  --radius: 8px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: var(--brand-dark);
+  background: var(--surface);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header,
+footer {
+  background: var(--brand);
+  color: var(--surface);
+  padding: 0.75rem 1.25rem;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.5rem;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn {
+  background: var(--brand);
+  color: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+}
+
+.panel {
+  border: 2px solid var(--brand);
+  border-top: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+/* ===== Week 13 Practice ===== */
+
+.add-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.add-row input {
+  flex: 1 1 12rem;
+}
+
+.btn-ghost {
+  background: var(--surface);
+  color: var(--brand);
+  border: 2px solid var(--brand);
+}
+
+.btn-ghost:hover {
+  background: var(--brand-light);
+}
+
+.out {
+  background: var(--brand-light);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 0 0 1rem;
+  font: inherit;
+  white-space: pre-wrap;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

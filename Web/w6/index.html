@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 06 Practice — Flexbox</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Study Hub</h1>
+    <nav class="nav" aria-label="Primary">
+      <a href="#a">Cards</a>
+      <a href="#b">Wrap</a>
+      <a href="#c">Gap</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cards">
+      <article class="card" id="a">
+        <h2>Flex container</h2>
+        <p>The parent gets display: flex. The children line up in a row by themselves.</p>
+      </article>
+
+      <article class="card" id="b">
+        <h2>Wrapping</h2>
+        <p>flex-wrap: wrap lets the row break onto a second line instead of squeezing.</p>
+      </article>
+
+      <article class="card" id="c">
+        <h2>Gap</h2>
+        <p>gap is the space between items. No margins on the last child to clean up.</p>
+      </article>
+
+      <article class="card">
+        <h2>Basis</h2>
+        <p>flex: 1 1 200px means: grow, shrink, start from 200px wide.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="top">
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 06 Practice</p>
+  </footer>
+</body>
+</html>

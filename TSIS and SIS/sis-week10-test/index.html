@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tezjol Rider Test — niche quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Tezjol Rider Test</h1>
+    <p class="sub">Five questions before your first scooter ride in Almaty.</p>
+  </header>
+
+  <main>
+    <div class="bar" aria-hidden="true">
+      <div class="bar-fill" id="bar"></div>
+    </div>
+
+    <p class="status">
+      <span id="progress">Question 1 of 5</span>
+      <span id="score">Score: 0</span>
+    </p>
+
+    <section id="card" class="card">
+      <h2 id="question">Loading…</h2>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback"></p>
+      <button id="next" type="button" class="btn" hidden>Next question</button>
+    </section>
+
+    <section id="end" class="card" hidden>
+      <h2 id="end-title">Done</h2>
+      <p id="end-text"></p>
+      <button id="again" type="button" class="btn">Play again</button>
+    </section>
+  </main>
+
+  <footer>
+    <p class="watermark">CSE6624 | Maksim Kossov | [STUDENT ID] | niche-15</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* ===== Shared base: identical in every week ===== */
+
+:root {
+  /* seed: ID2 94, M 5, L 11 -> Hue 3, Accent 54 */
+  --hue: 3;
+  --accent-hue: 54;
+
+  --brand: hsl(var(--hue), 65%, 40%);
+  --brand-dark: hsl(var(--hue), 65%, 24%);
+  --brand-light: hsl(var(--hue), 70%, 95%);
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --muted: hsl(var(--hue), 25%, 36%);
+  --surface: #ffffff;
+
+  /* answer feedback: green is the only colour outside the seed family,
+     because right/wrong must not rely on the brand red alone */
+  --ok: hsl(152, 78%, 26%);
+  --ok-light: hsl(152, 60%, 94%);
+
+  --radius: 8px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: var(--brand-dark);
+  background: var(--surface);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header,
+footer {
+  background: var(--brand);
+  color: var(--surface);
+  padding: 0.75rem 1.25rem;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.watermark {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ===== SIS-3 quiz ===== */
+
+.sub {
+  margin: 0.25rem 0 0;
+  opacity: 0.9;
+}
+
+.bar {
+  height: 8px;
+  background: var(--brand-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.25s;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.card {
+  border: 2px solid var(--brand);
+  border-top: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* one option = one button, so it is keyboard reachable for free */
+.option {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--brand-dark);
+  font: inherit;
+  cursor: pointer;
+}
+
+.option:hover:not(:disabled) {
+  background: var(--brand-light);
+}
+
+.option:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+/* colour AND a prefix mark, so the state is not carried by colour alone */
+.option.is-correct {
+  border-color: var(--ok);
+  background: var(--ok-light);
+  color: var(--ok);
+  font-weight: bold;
+}
+
+.option.is-correct::before {
+  content: "✓ ";
+}
+
+.option.is-wrong {
+  border-color: var(--brand);
+  background: var(--brand-light);
+  color: var(--brand);
+  font-weight: bold;
+}
+
+.option.is-wrong::before {
+  content: "✕ ";
+}
+
+.feedback {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  min-height: 1.4em;
+}
+
+.btn {
+  background: var(--brand);
+  color: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 10 Practice — Tip calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Tip calculator</h1>
+  </header>
+
+  <main>
+    <p>Open DevTools &rarr; Console (F12). Two lines are logged when the page loads.</p>
+
+    <p class="field">
+      <label for="bill">Bill</label>
+      <input id="bill" type="number" min="0" step="0.01" value="1000" />
+    </p>
+
+    <p class="field">
+      <label for="tip">Tip %</label>
+      <input id="tip" type="number" min="0" value="10" />
+    </p>
+
+    <p>
+      <button id="btn" type="button">Calculate</button>
+    </p>
+
+    <pre id="out">Output…</pre>
+  </main>
+
+  <footer>
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 10 Practice</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

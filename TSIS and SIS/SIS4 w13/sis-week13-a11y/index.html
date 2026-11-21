@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Tezjol — lost and found</title>
+  <link rel="icon" href="images/scooter.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the contact form</a>
+
+  <header class="top">
+    <img src="images/scooter.svg" alt="" width="48" height="48" />
+    <p class="brand">Tezjol Scooters</p>
+  </header>
+
+  <main id="main">
+    <h1>Contact us</h1>
+    <h2>Lost something on a ride?</h2>
+    <p>Tell us the scooter number and what you left behind. We answer within a day.</p>
+
+    <form id="contact" class="form">
+      <p class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+      </p>
+      <p class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+      </p>
+      <p class="field">
+        <label for="scooter">Scooter number</label>
+        <input id="scooter" name="scooter" type="text" inputmode="numeric" aria-describedby="scooter-hint" />
+        <span id="scooter-hint" class="hint">Printed under the handlebar, for example 0094.</span>
+      </p>
+      <p class="field">
+        <label for="what">What happened?</label>
+        <textarea id="what" name="what" rows="4" required></textarea>
+      </p>
+      <p><button class="btn" type="submit">Send</button></p>
+    </form>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section class="notes" aria-labelledby="a11y">
+      <h2 id="a11y">Accessibility notes</h2>
+      <p>What was wrong in <a href="before.html">before.html</a> and what I fixed here:</p>
+      <ol>
+        <li><strong>Inputs had no labels</strong>, only placeholders that disappear on typing. Each field now has a <code>&lt;label for&gt;</code> tied to its <code>id</code>; the scooter number has a hint linked with <code>aria-describedby</code>.</li>
+        <li><strong>"Send" was a <code>div</code> with <code>onclick</code></strong> — unreachable by Tab, deaf to Enter and Space. It is now a real <code>&lt;button type="submit"&gt;</code>.</li>
+        <li><strong>Grey text on white (#bbb, about 1.9:1)</strong> failed contrast. Text now uses the seed dark red at 12:1, labels at over 8:1.</li>
+        <li><strong>Focus was removed</strong> with <code>*:focus { outline: none }</code>. Every link, input and button now has a <code>:focus-visible</code> outline in the seed accent.</li>
+        <li><strong>Heading chaos</strong> — two <code>h1</code> and a jump to <code>h4</code>. Now one <code>h1</code>, then <code>h2</code>. The brand moved out of the headings into the header.</li>
+        <li><strong>The logo had no <code>alt</code>.</strong> It sits next to the brand name and adds nothing a reader would miss, so it is <code>alt=""</code> — decorative, skipped by screen readers.</li>
+        <li><strong>No <code>lang</code>, no viewport, no landmarks.</strong> Added <code>lang="en"</code>, the viewport meta, <code>header</code> / <code>main</code> / <code>footer</code> and a skip link to the form.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="watermark-banner">
+    <p>CSE6624 | Maksim Kossov | [STUDENT ID] | niche-15</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

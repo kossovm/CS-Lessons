@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>contact</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; color: #bbb; }
+    h1, h4 { color: #c9c9c9; }
+    *:focus { outline: none; }
+    input, textarea { display: block; margin: 0.5rem 0 1rem; padding: 0.5rem; border: 1px solid #eee; }
+    .send { display: inline-block; background: #e8e8e8; color: #fff; padding: 0.6rem 1.2rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <!-- DELIBERATELY BROKEN — the "before" state for SIS-4. Do not use. -->
+  <h1>Tezjol</h1>
+  <img src="images/scooter.svg" width="80" />
+  <h1>Contact us</h1>
+  <h4>Lost something on a ride?</h4>
+
+  <input type="text" placeholder="Your name" />
+  <input type="text" placeholder="Email" />
+  <input type="text" placeholder="Scooter number" />
+  <textarea placeholder="What happened?"></textarea>
+
+  <div class="send" onclick="alert('sent')">Send</div>
+</body>
+</html>

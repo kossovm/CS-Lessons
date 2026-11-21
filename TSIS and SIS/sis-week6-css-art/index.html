@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Art — Tezjol Scooter — Maksim Kossov</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Art: the Tezjol scooter</h1>
+    <p class="watermark">CSE6624 | Maksim Kossov | 20XXXXXX94 | niche-15</p>
+  </header>
+
+  <main>
+    <div class="art-layout">
+      <figure class="art-frame">
+        <div class="scooter-scaler">
+          <div class="scooter-stage" role="img" aria-label="Drawing of an electric scooter made only from HTML elements and CSS">
+            <span class="scooter-wheel scooter-wheel-rear"></span>
+            <span class="scooter-wheel scooter-wheel-front"></span>
+            <span class="scooter-deck"></span>
+            <span class="scooter-stem"></span>
+            <span class="scooter-bar"></span>
+            <span class="scooter-lamp"></span>
+              <span class="scooter-ground"></span>
+          </div>
+        </div>
+        <figcaption class="art-caption">
+          The scooter is the whole product of niche 15 — electric scooter rental.
+          Seven elements, no image files: two wheels, the deck, the stem, the
+          handlebar, the headlight and the road line. The headlight uses the accent
+          hue; everything else is the primary hue at different lightness.
+        </figcaption>
+      </figure>
+
+      <aside class="art-notes">
+        <h2>How it is built</h2>
+        <ul class="art-note-list">
+          <li>Wheels: <code>border-radius: 50%</code> with a thick border, no fill.</li>
+          <li>Stem: a rectangle turned with <code>transform: rotate(-16deg)</code>.</li>
+          <li>Stage uses <code>position: relative</code>; parts are absolute inside it.</li>
+          <li>Hover the drawing — the headlight brightens.</li>
+        </ul>
+
+        <h2>Palette</h2>
+        <ul class="art-note-list">
+          <li>Primary <code>hsl(3, 65%, 40%)</code> — seed hue 3</li>
+          <li>Accent <code>hsl(54, 70%, 45%)</code> — seed accent 54</li>
+          <li>Tints and shades keep the same two hues.</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p class="watermark">CSE6624 | Maksim Kossov | 20XXXXXX94 | niche-15</p>
+  </footer>
+</body>
+</html>

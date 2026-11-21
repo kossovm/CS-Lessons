@@ -1,0 +1,100 @@
+/* ===== Shared base: same in every week ===== */
+:root {
+  --brand: #005aaa;
+  --brand-dark: #004480;
+  --brand-light: #bee3f8;
+  --muted: #3a6e9c;
+  --surface: #ffffff;
+  --radius: 8px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* element selectors */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: var(--brand);
+  background: var(--surface);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header,
+footer {
+  background: var(--brand);
+  color: var(--surface);
+  padding: 0.75rem 1.25rem;
+}
+
+header a,
+footer a {
+  color: var(--brand-light);
+  text-decoration: none;
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* class selectors */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.nav {
+  display: flex;
+  gap: var(--gap);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ===== Week 06 Practice: flex nav + wrapping cards ===== */
+
+/* wrapping row of cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+/* grow, shrink, start at 200px */
+.card {
+  flex: 1 1 200px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 07 Practice — CSS Grid</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="top">
+      <h1>Grid practice</h1>
+      <nav class="nav" aria-label="Primary">
+        <a href="#a">Columns</a>
+        <a href="#b">Gap</a>
+        <a href="#c">Breakpoint</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p>Resize the window below 600px — three columns become one.</p>
+
+    <section class="cards">
+      <article class="card" id="a">
+        <h2>grid-template-columns</h2>
+        <p>repeat(3, 1fr) makes three tracks of equal width.</p>
+      </article>
+      <article class="card" id="b">
+        <h2>gap</h2>
+        <p>One property for the space between rows and columns.</p>
+      </article>
+      <article class="card" id="c">
+        <h2>@media</h2>
+        <p>Below 600px the template becomes a single 1fr column.</p>
+      </article>
+      <article class="card">
+        <h2>fr</h2>
+        <p>A fraction of the free space left after gaps are taken out.</p>
+      </article>
+      <article class="card">
+        <h2>Two dimensions</h2>
+        <p>Grid controls rows and columns at the same time.</p>
+      </article>
+      <article class="card">
+        <h2>Viewport meta</h2>
+        <p>Without it the media query is ignored on a real phone.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 07 Practice</p>
+  </footer>
+</body>
+</html>
