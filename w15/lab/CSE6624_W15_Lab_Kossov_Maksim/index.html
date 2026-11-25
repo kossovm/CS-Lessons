@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tezjol Scooters — Rent a scooter in Almaty</title>
+  <link rel="icon" href="images/scooter.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/nav.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">Tezjol Scooters</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="zones.html">Parking zones</a>
+        <a href="tips.html">Riding tips</a>
+        <a href="quiz.html">Rider test</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <h1>Unlock, ride, drop</h1>
+      <p>120 electric scooters across Almaly and Bostandyk. 90 &#8376; per minute, no subscription.</p>
+      <a class="btn" href="#book">Book a scooter</a>
+    </section>
+
+    <section class="block" aria-labelledby="how">
+      <h2 id="how">How it works</h2>
+      <div class="steps">
+        <article class="card">
+          <h3>1. Find</h3>
+          <p>Open the map, pick the scooter closest to you and reserve it for ten minutes.</p>
+        </article>
+        <article class="card">
+          <h3>2. Ride</h3>
+          <p>Scan the code on the handlebar. Billing starts when the motor wakes up.</p>
+        </article>
+        <article class="card">
+          <h3>3. Park</h3>
+          <p>End inside a marked zone. A photo of the parked scooter closes the ride.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="fleet">
+      <h2 id="fleet">Our fleet</h2>
+      <div class="fleet-row">
+        <img src="images/scooter.svg" alt="Side view of a Tezjol electric scooter with a mustard headlight" width="160" height="160" />
+        <p>
+          One model, serviced every week: limited to 25 km/h, 30 km range, lights
+          front and rear. Every scooter carries a number you can quote when
+          something goes wrong.
+        </p>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="book">
+      <h2 id="book">Book a scooter</h2>
+      <form id="book-form" class="form">
+        <p class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </p>
+        <p class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </p>
+        <p class="field">
+          <label for="zone">Pick-up zone</label>
+          <select id="zone" name="zone">
+            <option value="almaly">Almaly</option>
+            <option value="bostandyk">Bostandyk</option>
+            <option value="medeu">Medeu</option>
+          </select>
+        </p>
+        <p class="field">
+          <label for="minutes">Minutes</label>
+          <input id="minutes" name="minutes" type="number" min="10" max="180" value="30" required />
+        </p>
+        <p class="field-wide">
+          <label><input type="checkbox" name="agree" required /> I will park inside a marked zone</label>
+        </p>
+        <p class="field-wide">
+          <button class="btn" type="submit">Reserve</button>
+        </p>
+      </form>
+      <p id="book-msg" class="message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>CSE6624 &middot; Maksim Kossov &middot; Tezjol Scooters, niche 15 &middot; fictional brand</p>
+  </footer>
+</body>
+</html>

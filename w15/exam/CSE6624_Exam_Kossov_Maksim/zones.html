@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking zones — Tezjol Scooters</title>
+  <link rel="icon" href="images/scooter.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/nav.js" defer></script>
+  <script src="js/zones.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">Tezjol Scooters</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="zones.html" aria-current="page">Parking zones</a>
+        <a href="tips.html">Riding tips</a>
+        <a href="quiz.html">Rider test</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Parking zones</h1>
+    <p class="note">End your ride inside one of these. Type to filter &mdash; the page remembers your last filter.</p>
+
+    <div class="filter-row">
+      <p class="field">
+        <label for="q">Filter by zone or district</label>
+        <input id="q" type="search" placeholder="e.g. Almaly" />
+      </p>
+      <p><button id="clear" class="btn btn-ghost" type="button">Clear filter</button></p>
+    </div>
+
+    <p id="count" class="note" aria-live="polite"></p>
+    <div id="list" class="zone-grid"></div>
+    <p id="store-note" class="note"></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>CSE6624 &middot; Maksim Kossov &middot; Tezjol Scooters, niche 15 &middot; fictional brand</p>
+  </footer>
+</body>
+</html>

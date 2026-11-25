@@ -1,0 +1,383 @@
+/* ===== Tezjol Scooters — one stylesheet for every page ===== */
+
+:root {
+  /* seed: Hue 3, Accent 54 — change --hue and the whole site recolours */
+  --hue: 3;
+  --accent-hue: 54;
+
+  --brand: hsl(var(--hue), 65%, 40%);
+  --brand-dark: hsl(var(--hue), 65%, 24%);
+  --brand-light: hsl(var(--hue), 70%, 95%);
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --muted: hsl(var(--hue), 25%, 34%);
+  --ok: hsl(152, 78%, 26%);
+  --ok-light: hsl(152, 60%, 94%);
+  --surface: #ffffff;
+
+  --radius: 8px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--brand-dark);
+  background: var(--surface);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 { font-size: 1.8rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+
+/* visible keyboard focus on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* skip link: hidden until it receives keyboard focus */
+.skip {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  background: var(--brand-dark);
+  color: var(--surface);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius);
+  z-index: 10;
+}
+
+.skip:focus {
+  top: 0.5rem;
+}
+
+/* ---------- header + nav (Flexbox) ---------- */
+
+.site-header {
+  background: var(--brand);
+  color: var(--surface);
+}
+
+.bar {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.brand {
+  color: var(--surface);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: var(--brand-light);
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--surface);
+  border-bottom: 3px solid var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  color: var(--surface);
+  border: 2px solid var(--brand-light);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.8rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ---------- layout ---------- */
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.hero {
+  background: var(--brand-dark);
+  color: var(--surface);
+  border-radius: var(--radius);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero p {
+  margin: 0 0 1.25rem;
+}
+
+.block {
+  margin-bottom: 2.25rem;
+}
+
+.block > h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.35rem;
+}
+
+/* Grid: three equal steps / cards, one column on phones */
+.steps,
+.zone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+.card {
+  border: 2px solid var(--brand);
+  border-top: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.card p {
+  margin: 0;
+}
+
+.fleet-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.fleet-row img {
+  background: var(--brand-light);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+}
+
+.fleet-row p {
+  flex: 1 1 16rem;
+  margin: 0;
+}
+
+/* ---------- buttons + forms ---------- */
+
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+}
+
+.hero .btn {
+  background: var(--accent);
+  color: var(--brand-dark);
+  font-weight: bold;
+}
+
+.btn-ghost {
+  background: var(--surface);
+  color: var(--brand);
+  border: 2px solid var(--brand);
+}
+
+.btn-ghost:hover {
+  background: var(--brand-light);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem 1.25rem;
+  max-width: 40rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+/* fields are <p> elements: drop their default margin, the grid gap spaces them */
+.form p,
+.filter-row p {
+  margin: 0;
+}
+
+.field label {
+  font-weight: bold;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  padding: 0.55rem;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.message {
+  min-height: 1.5em;
+  font-weight: bold;
+  color: var(--ok);
+}
+
+/* ---------- parking zones ---------- */
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filter-row .field {
+  flex: 1 1 16rem;
+}
+
+.zone-empty {
+  grid-column: 1 / -1;
+  border: 2px dashed var(--brand);
+  border-radius: var(--radius);
+  padding: 1rem;
+  color: var(--brand);
+}
+
+/* ---------- quiz ---------- */
+
+.bar-track {
+  height: 8px;
+  background: var(--brand-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.25s;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.option {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--brand-dark);
+  font: inherit;
+  cursor: pointer;
+}
+
+.option:hover:not(:disabled) { background: var(--brand-light); }
+.option:disabled { cursor: default; }
+
+.option.is-correct { border-color: var(--ok); background: var(--ok-light); color: var(--ok); font-weight: bold; }
+.option.is-correct::before { content: "✓ "; }
+.option.is-wrong { background: var(--brand-light); color: var(--brand); font-weight: bold; }
+.option.is-wrong::before { content: "✕ "; }
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  background: var(--brand);
+  color: var(--surface);
+  text-align: center;
+  padding: 0.9rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- breakpoints ---------- */
+
+@media (max-width: 900px) {
+  .steps,
+  .zone-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  /* nav collapses into the toggle; .is-open is set by js/nav.js */
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .steps,
+  .zone-grid,
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+}

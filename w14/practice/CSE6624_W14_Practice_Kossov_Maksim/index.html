@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 14 Practice — Todo-lite, accessibility pass</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the task list</a>
+
+  <header>
+    <h1>Todo-lite</h1>
+  </header>
+
+  <main id="main">
+    <form id="form" class="add-row">
+      <label for="item">New task</label>
+      <input id="item" type="text" placeholder="What needs doing?" required />
+      <button class="btn" type="submit">Add</button>
+    </form>
+
+    <p class="hint">Press a task to mark it done. The × button deletes it. Both work with Tab and Enter.</p>
+
+    <ul id="list" class="list" aria-label="Tasks"></ul>
+
+    <p id="empty" class="empty">Nothing here yet. Add your first task.</p>
+
+    <!-- announced by screen readers, invisible on screen -->
+    <p id="announce" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+
+  <footer>
+    <p>CSE6624 &middot; Maksim Kossov &middot; Week 14 Practice</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
