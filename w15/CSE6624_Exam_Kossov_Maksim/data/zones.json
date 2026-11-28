@@ -1,0 +1,44 @@
+[
+  {
+    "id": "abay-furmanov",
+    "name": "Abay / Furmanov",
+    "district": "Almaly",
+    "slots": 12,
+    "note": "Under the metro entrance canopy"
+  },
+  {
+    "id": "green-bazaar",
+    "name": "Green Bazaar",
+    "district": "Almaly",
+    "slots": 8,
+    "note": "East wall, away from the stalls"
+  },
+  {
+    "id": "satbayev-campus",
+    "name": "Satbayev campus",
+    "district": "Bostandyk",
+    "slots": 20,
+    "note": "Between GUK and the library"
+  },
+  {
+    "id": "mega-alma-ata",
+    "name": "Mega Alma-Ata",
+    "district": "Bostandyk",
+    "slots": 15,
+    "note": "North car park, row A"
+  },
+  {
+    "id": "medeu-lower-gate",
+    "name": "Medeu lower gate",
+    "district": "Medeu",
+    "slots": 6,
+    "note": "Last zone before the climb"
+  },
+  {
+    "id": "dostyk-plaza",
+    "name": "Dostyk Plaza",
+    "district": "Medeu",
+    "slots": 10,
+    "note": "Street side, not the courtyard"
+  }
+]

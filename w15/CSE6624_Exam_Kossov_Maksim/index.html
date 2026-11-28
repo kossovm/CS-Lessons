@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tezjol Scooters — Rent a scooter in Almaty</title>
+  <link rel="icon" href="images/scooter.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/nav.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">Tezjol Scooters</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="zones.html">Parking zones</a>
+        <a href="tips.html">Riding tips</a>
+        <a href="quiz.html">Rider test</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <h1>Unlock, ride, drop across Almaty</h1>
+      <p>120 city electric scooters across Almaly, Bostandyk and Medeu. 90 &#8376; per minute, zero unlock fee.</p>
+      <a class="btn" href="#book">Reserve a scooter</a>
+    </section>
+
+    <section class="block" aria-labelledby="how">
+      <h2 id="how">How it works</h2>
+      <div class="steps">
+        <article class="card">
+          <h3>1. Find a hub</h3>
+          <p>Check six marked parking zones from Satbayev campus to Dostyk Plaza and pick the closest scooter.</p>
+        </article>
+        <article class="card">
+          <h3>2. Scan &amp; ride</h3>
+          <p>Scan the handlebar code. Billing starts at 90 &#8376;/min only when the motor unlocks.</p>
+        </article>
+        <article class="card">
+          <h3>3. Park neatly</h3>
+          <p>End inside a marked zone, wheels parallel to the kerb. A quick photo closes the trip.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="fleet">
+      <h2 id="fleet">Our fleet</h2>
+      <div class="fleet-row">
+        <img src="images/scooter.svg" alt="Side view of a Tezjol electric scooter with a red frame and mustard headlight" width="160" height="160" />
+        <p>
+          One city-tested model, serviced every Monday near Satbayev campus: GPS-capped
+          at 25 km/h on bike lanes (15 km/h in campus slow zones), 30 km range, dual
+          drum brakes, and front/rear LED lights.
+        </p>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="book">
+      <h2 id="book">Book a scooter &amp; contact</h2>
+      <div class="book-layout">
+        <div>
+          <form id="book-form" class="form" novalidate>
+            <p class="field">
+              <label for="name">Name (min 2 chars)</label>
+              <input id="name" name="name" type="text" autocomplete="name" required minlength="2" />
+            </p>
+            <p class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="rider@example.com" required />
+            </p>
+            <p class="field">
+              <label for="zone">Pick-up zone</label>
+              <select id="zone" name="zone">
+                <option value="almaly">Almaly (Abay / Green Bazaar)</option>
+                <option value="bostandyk">Bostandyk (Satbayev / Mega)</option>
+                <option value="medeu">Medeu (Lower gate / Dostyk)</option>
+              </select>
+            </p>
+            <p class="field">
+              <label for="minutes">Minutes (10&ndash;180)</label>
+              <input id="minutes" name="minutes" type="number" min="10" max="180" value="30" required />
+            </p>
+            <p class="field-wide">
+              <label><input id="agree" type="checkbox" name="agree" required /> I will park inside a marked zone</label>
+            </p>
+            <p class="field-wide">
+              <button class="btn" type="submit">Reserve</button>
+            </p>
+          </form>
+
+          <div id="book-errors" class="error-box" role="alert" aria-live="assertive" hidden></div>
+          <p id="book-msg" class="message" role="status" aria-live="polite" hidden></p>
+        </div>
+
+        <aside class="support-card" aria-labelledby="support-title">
+          <h3 id="support-title">Almaty Rider Hub</h3>
+          <p class="note">Need help with a lock, battery swap, or student pass?</p>
+          <ul class="support-list">
+            <li><strong>Hours:</strong> Daily, 08:00&ndash;22:00</li>
+            <li><strong>Service desk:</strong> Satbayev St 22, near GUK (Almaty)</li>
+            <li><strong>Telegram:</strong> @tezjol_almaty_demo</li>
+            <li><strong>Email:</strong> support@tezjol-demo.kz</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="watermark">CSE6624 | Maksim Kossov | 07********94 | niche-15</p>
+    <p>Tezjol Scooters &middot; Fictional Almaty micro-mobility demo</p>
+  </footer>
+</body>
+</html>

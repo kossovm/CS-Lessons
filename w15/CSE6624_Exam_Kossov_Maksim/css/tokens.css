@@ -1,0 +1,26 @@
+/* ===== Tezjol Scooters — shared seed palette & design tokens =====
+   Watermark: CSE6624 | Maksim Kossov | 07********94 | niche-15
+   Seed formula (ID2 = 94, Birth month M = 5, Surname K -> L = 11):
+   Hue    = (94 * 7 + 5 * 13) mod 360 = 723 mod 360 = 3   (primary red)
+   Accent = (3 + 40 + 11) mod 360     = 54                (accent mustard)
+   Niche  = (94 + 5 + 11) mod 24 + 1  = 15                (Electric scooter rental)
+   Change --hue below and ALL four pages (including the Bootstrap page) recolour at once. */
+
+:root {
+  --hue: 3;
+  --accent-hue: 54;
+
+  --brand: hsl(var(--hue), 65%, 40%);
+  --brand-dark: hsl(var(--hue), 65%, 24%);
+  --brand-light: hsl(var(--hue), 70%, 95%);
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --muted: hsl(var(--hue), 25%, 34%);
+  --ok: hsl(152, 78%, 26%);
+  --ok-light: hsl(152, 60%, 94%);
+  --error: hsl(356, 75%, 36%);
+  --error-light: hsl(356, 80%, 96%);
+  --surface: #ffffff;
+
+  --radius: 8px;
+  --gap: 1rem;
+}

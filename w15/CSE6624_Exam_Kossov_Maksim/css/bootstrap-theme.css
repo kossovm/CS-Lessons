@@ -1,0 +1,87 @@
+/* ===== Tezjol Scooters — seed theme overrides on top of Bootstrap 5.3 =====
+   Reads --hue, --brand, --brand-dark, --brand-light, --accent from css/tokens.css.
+   Bootstrap 5.3 hardcodes .btn-primary separately from .bg-primary, so both are overridden here. */
+
+:root {
+  --bs-primary: var(--brand);
+  --bs-link-color: var(--brand);
+  --bs-link-hover-color: var(--brand-dark);
+  --bs-body-color: var(--brand-dark);
+}
+
+.bg-primary {
+  background-color: var(--brand) !important;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+  --bs-btn-focus-shadow-rgb: 168, 42, 36;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+}
+
+.seed-card {
+  border: 2px solid var(--brand);
+  border-top: 6px solid var(--accent);
+}
+
+.seed-accent-rule {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.35rem;
+}
+
+.seed-nav-active {
+  color: #ffffff !important;
+  border-bottom: 3px solid var(--accent);
+}
+
+.seed-badge {
+  background-color: var(--brand-light);
+  color: var(--brand-dark);
+  border: 1px solid var(--brand);
+}
+
+.watermark {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* Visible keyboard focus matching the rest of the site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent) !important;
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+/* Skip link matching the other pages */
+.skip {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  background: var(--brand-dark);
+  color: var(--surface);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  z-index: 1050;
+}
+
+.skip:focus {
+  top: 0.5rem;
+}

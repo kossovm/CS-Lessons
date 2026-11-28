@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rider test — Tezjol Scooters</title>
+  <link rel="icon" href="images/scooter.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/nav.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">Tezjol Scooters</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="zones.html">Parking zones</a>
+        <a href="tips.html">Riding tips</a>
+        <a href="quiz.html" aria-current="page">Rider test</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Rider test</h1>
+    <p class="note">Five questions before your first ride.</p>
+
+    <div class="bar-track" aria-hidden="true"><div class="bar-fill" id="bar"></div></div>
+    <p class="status"><span id="progress">Question 1 of 5</span><span id="score">Score: 0</span></p>
+
+    <section id="card" class="card">
+      <h2 id="question">Loading&hellip;</h2>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="note" aria-live="polite"></p>
+      <button id="next" class="btn" type="button" hidden>Next question</button>
+    </section>
+
+    <section id="end" class="card" hidden>
+      <h2 id="end-title">Done</h2>
+      <p id="end-text"></p>
+      <p><button id="again" class="btn" type="button">Play again</button></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="watermark">CSE6624 | Maksim Kossov | 07********94 | niche-15</p>
+    <p>Tezjol Scooters &middot; Fictional Almaty micro-mobility demo</p>
+  </footer>
+</body>
+</html>
